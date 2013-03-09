@@ -59,5 +59,12 @@ describe ApplicationConfig do
       ApplicationConfig.find(subject.id).name.should eq "new name"
     end
   end
+  
+  describe "methods" do
+    subject { @conf }
+    it "should return the git server config details" do
+      ApplicationConfig.config.should eq @conf
+    end
+  end
     
 end

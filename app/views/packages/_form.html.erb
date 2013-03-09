@@ -1,0 +1,7 @@
+<div class="span3 well">
+	<%= form_for(@package, :remote => true) do |f| %>
+  	<%= f.text_field :commit_id, :placeholder => 'Commit ID', :class => "span3" %> <br />
+  	<%= f.text_field :name, :placeholder => 'Package Name', :class => "span3" %> <br />
+  	<%= f.submit "Save", :class => 'btn btn-success' %>
+  	<% end %>	
+</div>

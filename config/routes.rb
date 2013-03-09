@@ -1,5 +1,7 @@
 ReleasePackager::Application.routes.draw do
+  
   resources :application_configs
+  resources :packages
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

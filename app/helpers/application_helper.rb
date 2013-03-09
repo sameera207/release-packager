@@ -12,6 +12,11 @@ module ApplicationHelper
     response
   end
   
+  #format date time
+  def time_format time
+    time.strftime("%m/%d/%Y at %I:%M%p")
+  end
+  
   private
   def alert_class
     css_class = case flash.first[0]

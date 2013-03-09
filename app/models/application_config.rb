@@ -8,6 +8,11 @@ class ApplicationConfig < ActiveRecord::Base
   
   after_validation :validate_git_repo
   
+  #return the current git configurations
+  def self.config
+    ApplicationConfig.try(:first)
+  end
+  
   #validate via Grit
   def validate_git_repo
     begin
