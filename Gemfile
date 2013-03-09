@@ -23,6 +23,8 @@ group :test, :development do
   gem "guard-spork"
   gem 'rb-inotify', '~> 0.8.8' 
 end
+
+gem 'grit', :git => 'git://github.com/sameera207/grit.git'
  
 
 
