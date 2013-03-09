@@ -7,4 +7,9 @@ FactoryGirl.define do
     package_path "/some_package_path"
     package_type "zip"
   end
+  
+  factory :invalid_application_config, parent: :application_config do |f|
+    f.name nil
+  end
+  
 end
