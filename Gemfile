@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'sqlite3'
+gem 'mysql'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -25,7 +26,10 @@ group :test, :development do
 end
 
 gem 'grit', :git => 'git://github.com/sameera207/grit.git'
- 
+
+gem "therubyracer"
+gem "less-rails" 
+gem "twitter-bootstrap-rails" 
 
 
 # To use debugger

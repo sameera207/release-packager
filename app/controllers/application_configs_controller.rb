@@ -1,6 +1,8 @@
 class ApplicationConfigsController < ApplicationController
   respond_to :js, :html
   
+  before_filter :load_package_types
+  
   def index
     @application_config = render_application_config
   end
@@ -24,9 +26,16 @@ class ApplicationConfigsController < ApplicationController
     end
   end
   
+  def load_package_types
+    @package_types = PackageType.load_package_types 
+    @package_types
+  end
+  
   private
   def render_application_config
     (ApplicationConfig.all.length == 0) ? (ApplicationConfig.new) : (ApplicationConfig.first) 
   end
+  
+  
   
 end
