@@ -1,4 +1,6 @@
 module ApplicationHelper
+  #display flash message with 
+  #twitter bootsrap style
   def flash_display
     response = "<div class='alert #{alert_class}'>"
     response += "<button type='button' class='close' data-dismiss='alert'>x</button>"

@@ -70,7 +70,7 @@ describe ApplicationConfigsController do
     
     context "with in-valid attributes" do
       it "should update the existing conf" do
-        put :update, id: @application_config, application_config: FactoryGirl.attributes_for(:application_config, name: "Edited config", package_path: nil),
+        put :update, id: @application_config, application_config: FactoryGirl.attributes_for(:application_config, name: nil),
         :format => 'js'  
         @application_config.reload
         @application_config.name.should eq("Test Config")

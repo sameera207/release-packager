@@ -2,7 +2,6 @@
 	<%= form_for(@application_config, :remote => true) do |f| %>
   	<%= f.text_field :name, :placeholder => 'Package Name', :class => "span6" %> <br />
   	<%= f.text_field :git_repo_path, :placeholder => 'Git repo path', :class => "span6" %> <br />
-  	<%= f.text_field :package_path, :placeholder => 'Package Path', :class => "span6" %> <br />
   	<%= f.select :package_type, options_from_collection_for_select(@package_types, "id", "name") %> <br />
   	<%= f.submit "Save", :class => 'btn btn-success' %>
   	<% end %>	

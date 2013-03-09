@@ -26,6 +26,7 @@ class ApplicationConfigsController < ApplicationController
     end
   end
   
+  #loading package types
   def load_package_types
     @package_types = PackageType.load_package_types 
     @package_types
@@ -33,6 +34,8 @@ class ApplicationConfigsController < ApplicationController
   
   private
   def render_application_config
+    # if the configuration is already added then return the details
+    # if the configuration is not added then allow user to enter new details
     (ApplicationConfig.all.length == 0) ? (ApplicationConfig.new) : (ApplicationConfig.first) 
   end
   

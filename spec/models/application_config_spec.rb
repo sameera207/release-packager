@@ -11,7 +11,6 @@ describe ApplicationConfig do
     subject { @conf }
     
     it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:package_path) }  
     it { should validate_presence_of(:package_type) }
      
     it "should have onle zip, tar.gz as the package types" do

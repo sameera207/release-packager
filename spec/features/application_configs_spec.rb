@@ -14,7 +14,6 @@ describe "ApplicationConfigs" do
         visit application_configs_path
         fill_in 'application_config_name', :with => 'sample name'
         fill_in 'application_config_git_repo_path', :with => Rails.root.join('spec', 'support', 'git-repo').to_s
-        fill_in 'application_config_package_path', :with => 'another_path'
         select('zip', :from => 'application_config_package_type')
         click_button 'Save'
         page.should have_content("Release Packagesr sameera207")
@@ -25,7 +24,6 @@ describe "ApplicationConfigs" do
         visit application_configs_path
         fill_in 'application_config_name', :with => nil
         fill_in 'application_config_git_repo_path', :with => Rails.root.join('spec', 'support', 'git-repo').to_s
-        fill_in 'application_config_package_path', :with => 'another_path'
         select('zip', :from => 'application_config_package_type')
         click_button 'Save'
         page.should have_content("Release Packagesr sameera207")

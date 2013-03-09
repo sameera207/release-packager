@@ -2,7 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-  message = $("#message")
   tr = $("#commits").find("tr")
   tr.bind "click", (event) ->
     values = ""
@@ -11,4 +10,4 @@ $ ->
       if index == 0
        $('#package_commit_id').val(item.innerHTML.replace(/^\s+|\s+$/g, '')) 
 
-    message.html values
+    

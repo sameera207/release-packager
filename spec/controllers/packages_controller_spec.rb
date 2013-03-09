@@ -5,6 +5,7 @@ describe PackagesController do
   before(:each) do
     @commits = [Grit::Commit]
     Package.any_instance.stubs(:git_commits).returns(@commits)
+    PackagesController.any_instance.stubs(:package_path).returns("/")
     @packages = [FactoryGirl.create(:package), FactoryGirl.create(:package2)]
   end
 

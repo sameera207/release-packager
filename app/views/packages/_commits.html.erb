@@ -1,0 +1,15 @@
+<table class="table-striped table-bordered commits" id="commits">
+	<% @commits.each do |commit| %>
+	<tr class="commit_row">
+		<td>
+			<%= commit.id %>
+		</td>
+		<td>
+			<%= commit.author %>
+		</td>
+		<td>
+			<%= time_format(commit.committed_date) %>
+		</td>
+	</tr>
+	<% end %>
+</table>

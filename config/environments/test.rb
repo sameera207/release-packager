@@ -35,3 +35,4 @@ ReleasePackager::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+PACKAGE_PATH = "#{Rails.root}/public/archives"

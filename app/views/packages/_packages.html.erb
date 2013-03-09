@@ -1,0 +1,19 @@
+<table class="table-striped table-bordered commits">
+	<% @packages.each do |package| %>
+	<tr>
+		<td>
+			<%= package.commit_id %>
+		</td>
+		<td>
+			<%= package.name %>
+		</td>
+		<td>
+			<%= time_format(package.created_at) %>
+		</td>
+		<td>
+			<%= link_to 'download', download_package_path(package.id), :class => 'btn btn-warning' %>
+			<%= link_to 're-package', '' %>
+		</td>
+	</tr>
+	<% end %>
+</table>
