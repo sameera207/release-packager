@@ -4,6 +4,7 @@ class Package < ActiveRecord::Base
   validates :commit_id, :presence => true
   validates :commit_id, :uniqueness => true 
 
+  #this is a comment
   scope :latest_first, lambda {
     {:order => "created_at desc"}
   }
